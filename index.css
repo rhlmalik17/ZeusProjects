@@ -20,7 +20,10 @@
     align-items: center;
     height: 18vh;
 
-
+}
+.socialLinks{
+    position: relative;
+    right: -9%;
 }
 .socialLinks ul {
     list-style: none;
@@ -29,6 +32,7 @@
     color: white;
     justify-content: space-around;
     width: 50vh;
+
 }
 .logo img{
    transform: scale(0.9);
@@ -55,9 +59,94 @@
     height: 100%;
     width: 100%;
 }
-@media screen and (max-width: 768px){
+
+.burger{
+    display: none;
+}
+.burger div{
+    background-color: white;
+    width: 25px;
+    margin: 4px;
+    height: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width: 768px)
+{
     body{
-        display: none;
+        overflow-x: hidden;
     }
 
+    .socialLinks{
+
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background-color: #ff202b;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        transform: translateX(100%);
+    }
+    .socialLinks ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 92vh;
+        align-items: center;
+
+    }
+    .socialLinks ul li{
+        opacity: 0;
+    }
+    .nav-active{
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .navbar{
+        height: 10vh;
+    }
+   .logo{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+   }
+.logoLabel{
+    transform: translate(-24px,14px) scale(1.2);
+}
+   .logo img{
+       transform: scale(0.5);
+   }
+    #scroll{
+        height: 100%;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+
+@keyframes socialFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+.toggle .link1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.toggle .link2{
+    opacity: 0;
+}
+.toggle .link3{
+    transform: rotate(45deg) translate(-5px,-5px);
 }
