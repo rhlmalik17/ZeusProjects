@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff202b;
+    align-items: center;
+    height: 18vh;
+}
+.socialLinks ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    width: 50vh;
+}
+
+.logo img{
+   transform: scale(0.9);
+
+}
