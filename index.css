@@ -1,16 +1,28 @@
+@font-face {
+    font-family: 'Yeon Sung', cursive;
+    src: url('/labels/YeonSung-Regular.ttf') format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*body{*/
+/*    background-image: url("https://wallpapersite.com/images/wallpapers/sunset-3840x2160-landscape-summer-tuscany-italy-silhouette-red-hd-4k-13156.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100%;*/
+/*}*/
 .navbar{
     display: flex;
     justify-content: space-around;
     background-color: #ff202b;
     align-items: center;
     height: 18vh;
+
+
 }
-.socialLinks ul{
+.socialLinks ul {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -18,8 +30,34 @@
     justify-content: space-around;
     width: 50vh;
 }
-
 .logo img{
    transform: scale(0.9);
+    pointer-events: none;
+}
+.socialLinks ul li i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.logoLabel{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    bottom: 10px;
+    font-family: 'Yeon Sung', cursive;
+}
+#scroll{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    body{
+        display: none;
+    }
 
 }
